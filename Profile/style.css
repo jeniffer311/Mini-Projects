@@ -1,0 +1,85 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    background: #7c2585;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.profilecard{
+    width: 240px;
+    height: 350px;
+    background-image: url("./download.jpeg");
+    background-size: cover;
+    background-position: center;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-radius: 20px;
+    border: 1px solid  #b25bbb;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    padding: 20px;
+    color: black;
+    overflow: hidden;
+    position: relative;
+}
+.profilecard::before{
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 150%;
+    height: 150%;
+    background: radial-gradient(circle,#9740a0, transparent);
+    animation: rotateGlow 6s linear infinite;
+    z-index: 0;
+}
+@keyframes rotateGlow {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+.profilecard *{
+    position: relative;
+    z-index: 1;
+}
+    .profilepic {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        border: 3px solid #7c2585;
+        margin: 20px auto;
+        background-image: url('./jui.jpg'); /* Replace with your image path */
+        background-size: cover;
+        background-position: center;
+    }
+.profilecard h2{
+    font-size: 22px;
+    margin: 10px 0;
+    font-weight: bold;
+}
+.profilecard p{
+    font-size: 14px;
+    color: black;
+    margin-bottom: 20px;
+}
+.profilecard button{
+    padding: 10px 20px;
+    background: #7c2585;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    color: white;
+    transition: 0.3s;
+}
+.profilecard button:hover{
+    background: #7c2585;
+}
